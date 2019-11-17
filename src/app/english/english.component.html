@@ -1,0 +1,24 @@
+<div class="fullwidth">
+    <mat-card>
+      <mat-card-content>
+    <table style="width: 100%">
+      <tr>
+      <td>
+      <mat-form-field>
+  <mat-label>English Title</mat-label>
+  <mat-select [(value)]="selectedPoem" (selectionChange)="onPoemSelection()">
+    <mat-option *ngFor="let poem of poems" [value]="poem.title">
+      {{poem.title}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+  <div class="epigraph">
+      <h2><i class="material-icons md-48">{{currPoemObj.icon}}</i>{{currPoemObj.title}}</h2>
+      <p *ngFor="let currLine of currPoemObj.content" class="mat">{{currLine}}</p>
+  </div>
+</td>
+</tr>
+    </table>
+    </mat-card-content>
+    </mat-card>
+    </div>

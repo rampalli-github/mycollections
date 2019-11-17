@@ -1,0 +1,11 @@
+<div class="fullwidth">
+<mat-toolbar color="primary"><h2 (click)="goToRoute('/')" style="cursor:pointer; float:left">My Collections</h2>&nbsp;
+  <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="goToRoute('/English')">English</button>
+    <button mat-menu-item (click)="goToRoute('/Telugu')">Telugu</button>
+    <button mat-menu-item (click)="goToRoute('/Songs')">Songs</button>
+  </mat-menu>
+  </mat-toolbar>
+</div>
+<router-outlet></router-outlet>
